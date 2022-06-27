@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import WavyText from '../../components/wavyText'
 
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
@@ -30,16 +31,22 @@ const Testimonials = () => {
 
   return (
     <>
-       {testimonials.length && (
-        <>
+      <h2 className="head-text">Blogs & Tutorials</h2>
+      <br />
+      {testimonials.length && (
+        <AnimatePresence key={testimonials[currentIndex]}>
           <div className="app__testimonial-item app__flex">
-            <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} />
+            <a href={testimonials[currentIndex].url} target='_blank'>
+              <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} />
+            </a>
             <div className="app__testimonial-content">
+              <a href={testimonials[currentIndex].url} target='_blank'>
+                <div>
+                  <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
+                  <h5 className="p-text">{testimonials[currentIndex].company}</h5>
+                </div>
+              </a>
               <p className="p-text">{testimonials[currentIndex].feedback}</p>
-              <div>
-                <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
-                <h5 className="p-text">{testimonials[currentIndex].company}</h5>
-              </div>
             </div>
           </div>
 
@@ -52,7 +59,7 @@ const Testimonials = () => {
               <HiChevronRight />
             </div>
           </div>
-        </>
+        </AnimatePresence>
       )}
 
       <div className="app__testimonial-brands app__flex">
@@ -65,8 +72,8 @@ const Testimonials = () => {
             <img src={urlFor(brand.imgUrl)} alt={brand.name} />
           </motion.div>
         ))}
-      </div> 
-      </>
+      </div>
+    </>
   )
 }
 

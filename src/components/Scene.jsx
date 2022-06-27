@@ -6,11 +6,10 @@ import Model from './model'
 export default function Scene() {
    return (
       <>
-      <h5>3d model</h5>
       <Canvas
-         camera={{ position: [0, 0, 15.25], fov: 10 }}
+         camera={{ position: [0, 0, 15.25], fov: 9 }}
          style={{
-            backgroundColor: '#111a21',
+            backgroundColor: '#edf2f8',
             width: '30vw',
             height: '100vh',
          }}

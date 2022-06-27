@@ -19,6 +19,8 @@ import vue from '../assets/vue.png'
 
 import vjedit from '../assets/vjedit.png'
 import vijay from '../assets/vijay.png'
+import logo_17 from '../assets/logo_17.png'
+import edited from '../assets/edited.png'
 import solidity from '../assets/solidity.png'
 import node from '../assets/node.png'
 
@@ -42,6 +44,7 @@ import spotify from '../assets/spotify.png'
 export default {
   email,
   mobile,
+  edited,
   api,
   cpp,
   css,
@@ -52,6 +55,7 @@ export default {
   graphql,
   html,
   vijay,
+  logo_17,
   javascript,
   mu5,
   solidity,

@@ -13,6 +13,7 @@ const WavyText: FC<Props> = ({
   delay = 0,
   duration = 0.05,
   replay,
+  color,
   ...props
 }: Props) => {
   const letters = Array.from(text);
@@ -50,7 +51,7 @@ const WavyText: FC<Props> = ({
 
   return (
     <motion.h1
-      style={{ display: "flex", overflow: "hidden" }}
+      style={{ display: "flex", overflow: "hidden", color: color}}
       variants={container}
       initial="hidden"
       animate={"visible"}
