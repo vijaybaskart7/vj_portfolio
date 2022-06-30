@@ -4,6 +4,7 @@ import { AppWrap } from '../../wrapper'
 import { images } from '../../constants'
 import Scene from '../../components/Scene'
 import './Header.scss'
+import WavyText from '../../components/wavyText'
 
 const scaleVariants = {
   whileInView: {
@@ -26,10 +27,13 @@ const Header = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span>👋</span>
-            <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
-              <h1 className="head-text">Vijay</h1>
+          <WavyText text="👋" color ='#EA7F3D'/>
+
+            {/* <span>👋</span> */}
+            <div>
+              <p className="p-text">Hi, This is</p>
+              {/* <h1 className="head-text">Vijay</h1> */}
+              <WavyText text="Vijay" color ='#EA7F3D'/>
             </div>
           </div>
 

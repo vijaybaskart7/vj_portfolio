@@ -9,7 +9,7 @@ export default function Scene() {
       <Canvas
          camera={{ position: [0, 0, 15.25], fov: 9 }}
          style={{
-            backgroundColor: '#edf2f8',
+            backgroundColor: '#D6E2DD',
             width: '30vw',
             height: '100vh',
          }}
