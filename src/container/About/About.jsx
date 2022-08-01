@@ -18,8 +18,8 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">I'm a <span>Web Developer</span> <br />passionate about  <span>Web3 development</span></h2>
-      <h2 className="head-text">My Area of works include...</h2>
+      <h2 className="head-text">I'm a <span>Application Developer</span> <br />passionate about  <span>Web3 development</span></h2>
+      {/* <h2 className="head-text">My Area of works include...</h2> */}
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
